@@ -5,6 +5,7 @@ they have to guess it right.
 """
 # Imports
 import random
+from logo import logo
 
 # constants
 EASY = 7
@@ -46,6 +47,7 @@ def start_game():
     This function is start the game functionality.
     """
     # Default displays
+    print(logo)
     print('IMPORTANT:\n A number between 1 and 100 is chosen at random. '
           '\n Select a level (Easy or Hard).'
           '\n Easy means 7 attempts.'
@@ -53,8 +55,8 @@ def start_game():
 
     # Random number chosen
     random_number = random.randint(1, 100)
-    print(random_number)
 
+    # Calling the level function
     attempts = level()
 
     # Add continuous iteration until declared otherwise
@@ -78,7 +80,7 @@ def start_game():
             if attempts is None:
                 game_over = True
             elif attempts == 0:
-                print("You've run out of attempts, you lose.")
+                print(f"You've run out of attempts, you lose.\nThe random number was {random_number}.")
                 game_over = True
             else:
                 print("Guess again.")
