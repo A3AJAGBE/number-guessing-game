@@ -16,13 +16,19 @@ print('IMPORTANT:\n A number between 1 and 100 is chosen at random. '
 random_number = random.randint(1, 100)
 print(random_number)
 
-# User guessing
-guess = int(input('Guess a number: \n'))
+# Add continuous iteration until declared otherwise
+game_over = False
+while not game_over:
+    # User guessing
+    guess = int(input('\nGuess a number: '))
 
-if guess < 1 or guess > 100:
-    print('Your guess must be between 1 and 100.')
-else:
-    if guess == random_number:
-        print('Correct')
+    if guess < 1 or guess > 100:
+        print('Your guess must be between 1 and 100.')
     else:
-        print('Wrong')
+        if random_number == guess:
+            print('The guess is correct. Well done')
+            game_over = True
+        elif random_number < guess:
+            print('The guess is too high. Try again!!!')
+        else:
+            print('The guess is too low. Try again!!!')
