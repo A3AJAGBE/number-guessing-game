@@ -7,4 +7,4 @@ The user will have to guess the number by choosing a level that will determine h
 they have to guess it right.
 
 
-![Demo]()
+![Demo](https://github.com/A3AJAGBE/number-guessing-game/blob/main/num_guessing_game.gif)
